@@ -7,6 +7,13 @@ import random
 
 def generate_array(n):
     array = []
+    new_num = 1000000
     random.seed()
-    for i in range(n):
-        random.randint(i,n-)
+    while len(array) != n:
+        new_num = random.randint(new_num-20, new_num)
+        if new_num not in array:
+            array.append(new_num)
+    print(array)
+
+
+generate_array(50000)
