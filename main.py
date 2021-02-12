@@ -13,7 +13,7 @@ def generate_array(n):
         new_num = random.randint(new_num - 20, new_num)
         if new_num not in array:
             array.append(new_num)
-    print(array)
+    return array
 
 
 def hayes_sort(array_a):
@@ -30,4 +30,12 @@ def hayes_sort(array_a):
     return array_b
 
 
-generate_array(50000)
+def bubble_sort(array):
+    for i in range(len(array)-1):
+        for j in range(len(array)-1):
+            if array[j+1]<array[j]:
+                temp = array[j+1]
+                array[j+1] = array[j]
+                array[j] = temp
+    return array
+
